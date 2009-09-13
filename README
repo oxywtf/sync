@@ -1,0 +1,53 @@
+= Synchronized Data Structures
+
+* http://death.rubyforge.org
+* http://death.rubyforge.org/sync
+
+
+== ABSTRACT
+
+Sync provides a set of classes, equivalent to built-in Ruby classes
+but autmatically synchronized for use in multi-threaded applications.
+
+
+== SYNOPSIS
+
+Use the classes provided pretty much just as you would the normal classes.
+
+  require 'sync/hash'
+
+  hash = SyncHash.new
+  hash = SyncHash.new(Hash.new)   # Delegate
+
+
+== FUTURE VERSION
+
+Wondering if it would be prudent to move the classes into the Sync namespace, i.e.
+
+  SyncHash  ->  Sync::Hash
+  SyncArray ->  Sync::Array
+
+
+== HOW TO INSTALL
+
+To install with RubyGems simply open a console and type:
+
+  gem install sync
+
+Local installation requires Setup.rb (gem install setup),
+then download the tarball package and type:
+
+  tar -xvzf sync-1.0.0.tar.gz
+  cd sync-1.0.0
+  sudo setup.rb all
+
+Windows users use 'ruby setup.rb all'.
+
+
+== COPYING
+
+(LGPL 3 License)
+
+Copyright (c) 2009 Coding Dead
+Copyright (c) 2004 George Moschovitis
+
